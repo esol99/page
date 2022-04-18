@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+main{
+  overflow:hidden;
+}
+#mintro{
+  width:100%;height:100vh;
+  background:#fff;
+  overflow:hidden;
+}
+#mintro > h2{display:none;}
+#mintro > article{position:absolute}
+
+#top3{background:#f4f4f4;}
+#intro{
+  height:923px;
+  background:rgb(226, 223, 133);
+}
+#test{
+  height:869px;
+  background:rgb(95, 213, 91);
+}
+#event{
+  height:750px;
+  background:#f4f4f4;
+}
+#buy{
+  height:1780px;
+  background:rgb(173, 97, 223);
+}
+#cs{
+  height:1164px;
+  background:#F4F4F4;
+}
