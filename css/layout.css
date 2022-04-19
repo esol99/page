@@ -13,20 +13,20 @@ main{
 
 #top3{background:#f4f4f4;}
 #intro{
-  height:923px;
-  background:rgb(226, 223, 133);
+  height:862px;
+  position:relative;
 }
 #test{
-  height:869px;
-  background:rgb(95, 213, 91);
+  width:1200px;
+  margin:0px auto;
+  padding:160px 0px 180px 0px;
 }
 #event{
   height:750px;
   background:#f4f4f4;
 }
 #buy{
-  height:1780px;
-  background:rgb(173, 97, 223);
+  padding:50px 0px;
 }
 #cs{
   height:1164px;

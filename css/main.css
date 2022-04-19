@@ -106,7 +106,8 @@ section > p{
   font-size:32px;
   font-weight:bold;
 }
-.detail .price2{
+/* 견적내기 */
+.price2{
   font-size:16px;
   line-height:50px;
   border: 1px solid #333;
@@ -117,4 +118,177 @@ section > p{
   background-color: #083065;
   color: #fff;
   border:1px solid #083065 !important;
+}
+/* top2 좌, 우 방향버튼, 컨트롤 버튼*/
+#top3{position:relative;}
+
+.top3 .swiper-button-next, .top3 .swiper-button-prev{
+  position:absolute;
+}
+.top3 .swiper-button-next{
+  font-size:1.6rem;
+  right: 10% !important;
+  z-index: 1000 !important;
+}
+.top3 .swiper-button-prev{
+  font-size: 1.6rem;
+  left:10% !important;
+}
+.top3 .swiper-pagination{
+  position: absolute;
+  bottom: -100px;
+}
+
+/* 소개 페이지 서식 */
+#intro img{width:100%;}
+#intro > h2, #intro > strong, #intro >a{
+  position: absolute;
+  z-index:10;
+}
+#intro > h2{
+  width:100%;
+  text-align: center;
+}
+.l_title{
+  left:50px;
+  top:180px;
+}
+.r_title{
+  right:50px;
+  bottom:200px;
+  text-align: right;
+}
+#intro > strong{
+  font-size:26px;
+  font-weight:bold;
+  line-height:30px;
+}
+#intro > a{
+  bottom:50px;
+  left:50%;
+  transform:translateX(-50%);
+}
+/* 더보기 버튼 서식 */
+.more{
+  font-size:14px;
+  border:1px solid #333;
+  padding:6px 20px;
+  transition:0.5s;
+}
+.more:hover{
+  background: #333;
+  color: #fff;
+}
+
+/* test 서식 */
+#test:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.p01{
+  font-weight:500;
+  font-size:14px;
+  line-height:20px;
+  padding:15px 0px;
+}
+.p02{
+  position:absolute;
+  bottom:-30px;
+  width:100%;
+  text-align: center;
+}
+.t_box{
+  position: relative;
+  width:430px;
+  height:260px;
+  float:left;/*자식 요소에 float를 넣으면 부모의 높이가 없어지기 때문에 부모 요소에 :after선택자에 contanr:"";/display:block/clear 속성을 넣어 준다.*/
+  border: 1px solid #ccc;
+  padding:15px;
+  margin-top:50px;
+  text-align:center;
+}
+.t_box:first-of-type{
+  margin-right:30px;
+  margin-left:120px;
+}
+.t_box:first-of-type > h3{
+  padding-top:20px;
+}
+.t_box:last-of-type h3{
+  padding-top:30px;
+}
+.t_box > h3{
+  font-size:24px;
+  font-weight:bold;
+  line-height:40px;
+}
+.btn01{
+  background: #083065;
+  color: #fff;
+  line-height:30px;
+  width:200px;
+  border:none;
+}
+.t_box a{
+  color:#307da9;
+  line-height:50px;
+}
+.t_box a:after{
+  content:" >";
+  color: #333;
+}
+
+/* 이벤트 서식 */
+.event_s{
+  position:relative;
+  width:1200px;
+  margin: 0px auto;
+  overflow:hidden;
+  top:60px;
+}
+.swiper-pagination3{
+  text-align: center;
+  position:relative;
+  padding-top:30px;
+}
+.swiper-pagination3 span{
+  margin: 0px 3px;
+}
+
+/* 구매 안내 서식 */
+#buy{text-align:center; }
+#buy > h3{
+  font-size:24px;
+  text-align:center;
+  padding:60px 0px 50px 0px;
+  font-weight:bold;
+}
+.t_color01{color: #05698d;}
+#buy ul{
+  width:1000px;
+  margin:30px auto;
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#buy ul > li{
+  width:30%; 
+  margin-bottom:60px;
+}
+#buy ul > li h4{
+  font-size:16px;
+  font-weight:bold;
+}
+#buy ul > li img{
+  width:70px;
+  padding:15px 0px;
+}
+.p03{
+  line-height:20px;
+}
+#buy iframe{
+  border:none;
+  width:1000px;
+  height:600px
 }
