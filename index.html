@@ -71,7 +71,7 @@
         <a href="https://casper.hyundai.com/vehicles/benefit" title="자세히 보기">자세히 보기</a>
       </article>
 
-      <video muted autoplay loop="infinite">
+      <video muted autoplay loop="infinity">
         <source src="./images/main_KV.webm" type="video/webm">
       </video>
 
@@ -146,7 +146,7 @@
       <img src="./images/intro.jpg" alt="소개">
       <strong class="l_title">강인하고<br>아이코닉한 SUV</strong>
       <strong class="r_title">젊고 역동적인<br> 감성의<br> SUV디자인</strong>
-      <a href="#" title="더보기" class="more">더보기</a>
+      <a href="index.html" title="더보기" class="more">더보기</a>
     </section>
 
     <section id="test">
@@ -156,7 +156,7 @@
         <h3>현대 자동차 드라이빙 라운지<br>/ CASPER STUDIO 시승</h3>
         <p class="p01">드라이빙 라운지와 CASPER STUDIO에서<br> 캐스퍼를 체험해 보세요</p>
         <input type="button" value="시승 신청하기" class="btn01"><br>
-        <a href="#" title="시승 신청조회">시승 신청조회</a>
+        <a href="index.html" title="시승 신청조회">시승 신청조회</a>
         <p class="p02">&middot;시승 신청은 만 21세 이상 운전 면허 소지자면 누구나 이용 가능합니다. </p>
       </div>
       <div class="t_box">
@@ -187,7 +187,7 @@
     <section id="buy">
       <h2>캐스퍼 구매 안내</h2>
       <p class="p01">구매 절차를 차근차근 알려드립니다.</p>
-      <h3>캐스퍼, <span class="t_color01">온라인</span>에서만 <spans class="t_color01">구매</spans>할 수 있습니다.</h3>
+      <h3>캐스퍼, <span class="t_color01">온라인</span>에서만 <span class="t_color01">구매</span>할 수 있습니다.</h3>
       <ul>
         <li>
           <h4>쉬운 모델 선택</h4>
@@ -323,6 +323,9 @@
 
   <!-- 스와이퍼 슬라이드 js 서식 -->
   <script src="./script/swiper.js"></script>
+
+  <!-- 제이쿼리 쿠키파일 -->
+  <script src="./script/jquery.cookie.js"></script>
   
   <script>
         $(function(){
@@ -363,6 +366,38 @@
   let random = Math.floor(Math.random()*3)+1;
   console.log(random);
   document.getElementById('eb').src="./imges/banner0"+ random +".jpg";
+
+  //모달
+  let modal = `
+  <div class="modal">
+    <div>
+      <img src="./images/notice.jpg" alt="모달">
+      <input type="checkbox" id="ch"><label for="ch">오늘 하루 더이상 열지 않음</label>
+      <a href="#" title="닫기" id="c_btn">닫기</a>
+    </div>
+  </div>
+  `;
+
+  $('body').append(modal); //바디 태그의 안쪽 뒤에 내용을 추가
+
+  //1. 현재 브라우저에서 쿠키파일이 존재한다면 모달창이 나오지 않게한다.
+  if($.cookie('popup')=='none');
+  $('.modal').hide();
+
+  //2. 체크박스에 체크하고 닫기를 누르면 쿠키가 생성되고 모달창이 닫도록 한다.
+  let $ex = $('#ch');//체크박스 변수
+
+  function closeModal(){
+    if($ex.is('.checked')){
+      $.cookie('popup','none',{expires:1, path:'/'}); //쿠키 파일을 생성함
+    }
+    $('.modal').hide();//모달 숨기기
+  }
+
+  //3. 그냥 닫기 버튼을 누른 경우 cloasModal함수를 호출하여 쿠키 생성 유무를 따진다.
+  $('#c_btn').click(function(){
+    closeModal();
+  });
   </script>   
 </body>
 </html>
