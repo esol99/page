@@ -65,7 +65,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .gnb > li > a {
@@ -78,7 +78,7 @@ nav {
   right: 30px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: 100000;
   width: 200px;
   height: 160px;
@@ -151,7 +151,54 @@ nav {
 
 /* 푸터 공통 서식 */
 footer {
-  height: 177px;
+  padding: 40px 0px;
   background-color: #1a191a;
+  color: #ccc;
+}
+
+footer .f_inner {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+footer h2 {
+  float: left;
+  width: 150px;
+}
+
+footer .f_lnb, address {
+  width: 1000px;
+  padding-left: 50px;
+  float: left;
+}
+
+.f_lnb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 15px;
+  /* width:700px;
+  justify-content: space-around; */
+}
+
+.f_lnb ul > li > a {
+  border-right: 1px solid #ccc;
+  color: #ccc;
+  padding: 0px 20px;
+}
+
+.f_lnb ul > li:last-child > a {
+  border: none;
+}
+
+.f_lnb ul > li:nth-child(2) > a {
+  color: #fff;
+  font-weight: bold;
+}
+
+footer address {
+  padding-top: 20px;
+  line-height: 30px;
+  font-style: normal;
 }
 /*# sourceMappingURL=base.css.map */
