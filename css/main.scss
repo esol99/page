@@ -1,9 +1,13 @@
 @charset "utf-8";
-
+$width:1200px;
 $fsize:14px;
 $border:1px solid #333;
 $padding:6px 20px;
 $transition:0.5s;
+$m_color: #083065;
+$t_left:50%;
+$t_top:50%;
+$t_transform:translateY(-50%);
 
 @mixin btn01 {
   font-size:$fsize;
@@ -11,11 +15,19 @@ $transition:0.5s;
   padding:$padding;
   transition: $transition;
 }
+@mixin t_position{
+  left:$t_left;
+  transform:$t_transform;
+}
+@mixin t_position02 {
+  top:$t_top;
+  transform: $t_transform;
+}
 /* 캐스퍼 인트로 영상 */
 #mintro article{
   width:100%;
-  position:absolute; top:50%;
-  transform:translateY(-50%);
+  position:absolute;
+  @include t_position02;
   text-align:center;
   color:#fff;
   z-index:1000;
@@ -37,15 +49,16 @@ $transition:0.5s;
   cursor:pointer;
 }
 #mintro article > a:first-of-type{
-  background:#083065;
+  background:$m_color;
 }
 
 /* 아래로 이동하기 버튼 */
 #next_btn{
   position:absolute;
   bottom:40px; 
-  left:50%; /*position을 걸었을 때 가운데 중안을 잡기 위해서 박스 안에 50% 가운데에 배치*/
-  transform:translateY(-50%); /*자기 자신의 위치, 자신이 서 있는 위치에서 왼쪽으로 가라*/
+  @include t_position;
+  /*position을 걸었을 때 가운데 중안을 잡기 위해서 박스 안에 50% 가운데에 배치*/
+  /*자기 자신의 위치, 자신이 서 있는 위치에서 왼쪽으로 가라*/
   display:inline-block; /*a태그에 가로 세로 크기를 주기 위해서 */
   width:30px; height:30px;
   border-right:1px solid #fff;
@@ -86,7 +99,7 @@ section > p{
   display:block;
   padding-top:20px;
   font-size:20px;
-  color: #083065;
+  color: $m_color;
 }
 .detail > ul{
   display:flex;
@@ -126,7 +139,7 @@ section > p{
   transition:0.5s;
 }
 .detail .price2:hover{
-  background-color: #083065;
+  background-color: $m_color;
   color: #fff;
   border:1px solid #083065 !important;
 }
@@ -232,7 +245,7 @@ section > p{
   line-height:40px;
 }
 .btn01{
-  background: #083065;
+  background: $m_color;
   color: #fff;
   line-height:30px;
   width:200px;
@@ -250,7 +263,7 @@ section > p{
 /* 이벤트 서식 */
 .event_s{
   position:relative;
-  width:1200px;
+  width:$width;
   margin: 0px auto;
   overflow:hidden;
   top:60px;
@@ -328,7 +341,7 @@ section > p{
   display: flex;
   justify-content: center;
 }
-.ars_right{}
+
 .cs_p{
   width:175px;
   text-align: center;
@@ -365,7 +378,7 @@ section > p{
 
 /* 목록 서식 */
 #cs ul{
-  width: 1200px;
+  width:$width;
   margin: 15px auto;
   display: flex;
   justify-content:space-between;/*양쪽 끝으로 붙임*/
@@ -387,7 +400,7 @@ section > p{
   line-height: 20px;
 }
 .btn02{
-  background: #083065;
+  background: $m_color;
   color: #fff;
   line-height:30px;
   width:140px;
@@ -400,6 +413,6 @@ section > p{
 }
 /* 랜덤 이벤트 이미지 */
 .e_banner{
-  width: 1200px;
+  width:$width;
   margin: 0px auto;
 }

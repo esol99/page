@@ -39,9 +39,9 @@
   position: absolute;
   bottom: 40px;
   left: 50%;
-  /*position을 걸었을 때 가운데 중안을 잡기 위해서 박스 안에 50% 가운데에 배치*/
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  /*position을 걸었을 때 가운데 중안을 잡기 위해서 박스 안에 50% 가운데에 배치*/
   /*자기 자신의 위치, 자신이 서 있는 위치에서 왼쪽으로 가라*/
   display: inline-block;
   /*a태그에 가로 세로 크기를 주기 위해서 */
